@@ -14,7 +14,7 @@ metadata:
 spec:
   type: cors-openapi
   lifecycle: experimental
-  owner: guests
+  owner: user:default/guido.soeldner
   definition: |
     openapi: 3.0.1
     info:

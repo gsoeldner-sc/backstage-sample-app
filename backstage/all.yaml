@@ -17,4 +17,4 @@ metadata:
     backstage.io/techdocs-ref: dir:.
     github.com/project-slug: gsoeldner/backstage-sample-app
 spec:
-  owner: guests
+  owner: user:default/guido.soeldner

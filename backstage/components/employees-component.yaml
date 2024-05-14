@@ -12,7 +12,7 @@ metadata:
 spec:
   type: service
   lifecycle: experimental
-  system: backstage-sample-app
-  owner: guest
+  system: examples
+  owner: user:default/guido.soeldner
   providesApis:
     - employees-api

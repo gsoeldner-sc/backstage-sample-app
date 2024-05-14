@@ -1,0 +1,12 @@
+site_name: backstage-sample-app
+
+nav:
+  - Overview: index.md
+  - Quick Start: sample.md
+  - Business Logic:
+      - Employees: employees.md
+  - System Architecture : architecture.md
+  - Code Structure: structure.md
+
+plugins:
+  - techdocs-core

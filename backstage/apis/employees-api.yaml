@@ -15,5 +15,88 @@ spec:
   type: cors-openapi
   lifecycle: experimental
   owner: guests
-  definition:
-    http://localhost:8080/v3/api-docs
+  definition: |
+    openapi: 3.0.1
+    info:
+      title: OpenAPI definition
+      version: v0
+    servers:
+    - url: http://localhost:8080
+      description: Generated server url
+    paths:
+      /employees/{id}:
+        get:
+          tags:
+          - employee-controller
+          operationId: one
+          parameters:
+          - name: id
+            in: path
+            required: true
+            schema:
+              type: integer
+              format: int64
+          responses:
+            "200":
+              description: OK
+              content:
+                '*/*':
+                  schema:
+                    $ref: '#/components/schemas/Employee'
+        put:
+          tags:
+          - employee-controller
+          operationId: replaceEmployee
+          parameters:
+          - name: id
+            in: path
+            required: true
+            schema:
+              type: integer
+              format: int64
+          requestBody:
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/Employee'
+            required: true
+          responses:
+            "200":
+              description: OK
+              content:
+                '*/*':
+                  schema:
+                    $ref: '#/components/schemas/Employee'
+        delete:
+          tags:
+          - employee-controller
+          operationId: deleteEmployee
+          parameters:
+          - name: id
+            in: path
+            required: true
+            schema:
+              type: integer
+              format: int64
+          responses:
+            "200":
+              description: OK
+      /employees:
+        get:
+          tags:
+          - employee-controller
+          operationId: all
+          responses:
+            "200":
+              description: OK
+              content:
+                '*/*':
+                  schema:
+                    type: array
+                    items:
+                      type: string
+    components:
+      schemas:
+        Employee:
+          type: object
+

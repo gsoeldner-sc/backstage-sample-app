@@ -1,7 +1,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
-  name: employees
+  name: employees-api
   description: The employees API
   tags:
     - employees
@@ -16,4 +16,4 @@ spec:
   lifecycle: experimental
   owner: guests
   definition:
-    $text: http://localhost:8080/v3/api-docs
+    http://localhost:8080/v3/api-docs
